@@ -83,6 +83,8 @@ export default function Hero() {
               <a
                 id="hero-cv-cta"
                 href={developerInfo.cvUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-indigo-500/40 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition-all duration-200 hover:bg-indigo-50/20 dark:hover:bg-indigo-950/20 active:scale-98"
               >
                 <Download className="w-4 h-4 mr-2" />

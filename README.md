@@ -1,50 +1,20 @@
 <div align="center">
-
-# Lucky Onah
-
-### *Morningstar*
-
-**Full-Stack Developer • Mobile Developer • UI/UX Enthusiast**
-
-🌐 **Website:** https://staronah.com
-
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
 </div>
 
----
+# Run and deploy your AI Studio app
 
-# Portfolio
+This contains everything you need to run your app locally.
 
-Welcome to my personal portfolio repository.
+View your app in AI Studio: https://ai.studio/apps/ef929a8e-6233-412c-bbc3-2f5ced685414
 
-This website showcases my projects, technical skills, experience, and the technologies I use to build modern web and mobile applications. It serves as a central place to explore my work and learn more about me.
+## Run Locally
 
-## Tech Stack
+**Prerequisites:**  Node.js
 
-* React
-* Vite
-* Flutter
-* Firebase
-* TypeScript
-* Tailwind CSS
 
-## What You'll Find
-
-* Featured Projects
-* Professional Experience
-* Technical Skills
-* About Me
-* Contact Information
-
-## About Me
-
-I'm **Lucky Onah**, also known as **Morningstar**, a developer passionate about building fast, scalable, and user-friendly web and mobile applications. I enjoy transforming ideas into polished digital products using modern technologies.
-
-## Website
-
-🌐 https://staronah.com
-
----
-
-**Lucky Onah (Morningstar)**
-
-© 2026 All Rights Reserved.
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`

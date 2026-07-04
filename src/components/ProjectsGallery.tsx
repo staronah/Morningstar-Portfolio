@@ -311,7 +311,16 @@ export default function ProjectsGallery() {
                           </a>
                         )}
 
-                        {selectedProject.liveUrl && (
+                        {selectedProject.id === 'project-3' ? (
+                          <button
+                            id="modal-not-available-btn"
+                            onClick={() => window.dispatchEvent(new CustomEvent('show-not-available-popup'))}
+                            className="inline-flex items-center justify-center px-4.5 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-xs sm:text-sm transition-all shadow-md focus:outline-none"
+                          >
+                            <ExternalLink className="w-4 h-4 mr-2" />
+                            Live App
+                          </button>
+                        ) : selectedProject.liveUrl && (
                           <a
                             id="modal-live-link"
                             href={selectedProject.liveUrl}

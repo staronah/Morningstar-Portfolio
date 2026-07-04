@@ -22,18 +22,25 @@ export default function App() {
   const [darkMode] = useState<boolean>(true);
   const [isSplashing, setIsSplashing] = useState<boolean>(true);
   const [showPrivateModal, setShowPrivateModal] = useState<boolean>(false);
+  const [showNotAvailableModal, setShowNotAvailableModal] = useState<boolean>(false);
 
   useEffect(() => {
     document.documentElement.classList.add('dark');
     localStorage.setItem('theme', 'dark');
 
-    const handleShowPopup = () => {
+    const handleShowPrivatePopup = () => {
       setShowPrivateModal(true);
     };
 
-    window.addEventListener('show-private-github-popup', handleShowPopup);
+    const handleShowNotAvailablePopup = () => {
+      setShowNotAvailableModal(true);
+    };
+
+    window.addEventListener('show-private-github-popup', handleShowPrivatePopup);
+    window.addEventListener('show-not-available-popup', handleShowNotAvailablePopup);
     return () => {
-      window.removeEventListener('show-private-github-popup', handleShowPopup);
+      window.removeEventListener('show-private-github-popup', handleShowPrivatePopup);
+      window.removeEventListener('show-not-available-popup', handleShowNotAvailablePopup);
     };
   }, []);
 
@@ -136,6 +143,67 @@ export default function App() {
                 id="confirm-github-private-modal"
                 onClick={() => setShowPrivateModal(false)}
                 className="w-full inline-flex items-center justify-center px-5 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm sm:text-base transition-all shadow-md shadow-indigo-500/10 focus:outline-none active:scale-98"
+              >
+                Understood
+              </button>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+
+      {/* Not Available Modal Popup */}
+      <AnimatePresence>
+        {showNotAvailableModal && (
+          <>
+            {/* Backdrop */}
+            <motion.div
+              id="not-available-backdrop"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setShowNotAvailableModal(false)}
+              className="fixed inset-0 bg-black/70 backdrop-blur-md z-[100] flex items-center justify-center p-4"
+            />
+
+            {/* Modal */}
+            <motion.div
+              id="not-available-modal"
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              transition={{ type: 'spring', damping: 25, stiffness: 250 }}
+              className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-md bg-gray-900 border border-amber-500/30 rounded-3xl p-6 sm:p-8 shadow-2xl shadow-amber-500/5 z-[101] text-center overflow-hidden"
+            >
+              {/* Decorative Glow */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-40 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
+
+              {/* Close Button */}
+              <button
+                id="close-not-available-modal"
+                onClick={() => setShowNotAvailableModal(false)}
+                className="absolute top-4 right-4 p-2 rounded-full bg-gray-950 text-gray-400 hover:text-white transition-colors border border-gray-850 focus:outline-none"
+              >
+                <X className="w-4 h-4" />
+              </button>
+
+              {/* Header/Icon */}
+              <div className="mx-auto w-16 h-16 rounded-2xl bg-amber-950/40 border border-amber-500/20 flex items-center justify-center text-amber-400 mb-6">
+                <Lock className="w-8 h-8" />
+              </div>
+
+              {/* Content */}
+              <h3 className="font-display font-bold text-xl sm:text-2xl text-white mb-3">
+                Currently Not Available
+              </h3>
+              <p className="font-sans text-sm sm:text-base text-gray-300 leading-relaxed mb-6">
+                This project is currently not available for public viewing. Please check back later.
+              </p>
+
+              {/* Action Button */}
+              <button
+                id="confirm-not-available-modal"
+                onClick={() => setShowNotAvailableModal(false)}
+                className="w-full inline-flex items-center justify-center px-5 py-3 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-semibold text-sm sm:text-base transition-all shadow-md shadow-amber-500/10 focus:outline-none active:scale-98"
               >
                 Understood
               </button>

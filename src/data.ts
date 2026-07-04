@@ -7,7 +7,7 @@ export const developerInfo = {
   tagline: 'I build high-performance web applications with React & Vite, and beautiful mobile experiences with Flutter.',
   bio: 'I am a passionate Full-Stack Developer specializing in building clean, robust, and scalable solutions. I build fast, interactive web applications using React & Vite, craft fluid mobile experiences with Flutter, and power them with secure Firebase architectures and efficient Cloudinary media management.',
   avatar: 'https://res.cloudinary.com/dxoz4f448/image/upload/v1782831511/mypic_qrmkpe.png',
-  cvUrl: '#',
+  cvUrl: 'https://res.cloudinary.com/dxoz4f448/image/upload/v1783187454/Onah_Lucky_Chimtem_CV_f3ffs4.pdf',
   stats: [
     { label: 'Projects Completed', value: '50+' },
     { label: 'of building projects', value: '5+' },
@@ -87,7 +87,7 @@ export const projectsData: Project[] = [
     tags: ['React', 'TypeScript', 'Face ID API', 'Geolocation', 'Tailwind CSS'],
     category: 'Web App',
     githubUrl: 'https://github.com',
-    liveUrl: 'https://example.com',
+    liveUrl: 'https://nyscabj.pages.dev',
     featured: true,
     stats: [
       { label: 'Verify Accuracy', value: '99.6%' },
@@ -109,7 +109,7 @@ export const projectsData: Project[] = [
     tags: ['React', 'Vite', 'Firebase', 'Tailwind CSS', 'Emergency Hub'],
     category: 'Web App',
     githubUrl: 'https://github.com',
-    liveUrl: 'https://example.com',
+    liveUrl: 'https://nysccamp.pages.dev',
     featured: true,
     stats: [
       { label: 'Camp Users', value: '12K+' },
@@ -131,7 +131,7 @@ export const projectsData: Project[] = [
     tags: ['Mobile Dev', 'ID Card Scan', 'GPS Geolocation', 'Offline Sync'],
     category: 'Mobile',
     githubUrl: 'https://github.com',
-    liveUrl: 'https://example.com',
+    liveUrl: '#',
     featured: true,
     stats: [
       { label: 'Active Students', value: '8K+' },
@@ -149,7 +149,7 @@ export const projectsData: Project[] = [
     tags: ['React', 'TypeScript', 'AirTag Tracking', 'Entry Logging', 'Real-time Approvals'],
     category: 'Web App',
     githubUrl: 'https://github.com',
-    liveUrl: 'https://example.com',
+    liveUrl: 'https://estatevip.pages.dev',
     featured: true,
     stats: [
       { label: 'Approval Speed', value: '<45s' },
@@ -171,7 +171,7 @@ export const projectsData: Project[] = [
     tags: ['React', 'TypeScript', 'Tailwind CSS', 'Geolocated Shops', 'On-demand Delivery'],
     category: 'Web App',
     githubUrl: 'https://github.com',
-    liveUrl: 'https://example.com',
+    liveUrl: 'https://printify-6er.pages.dev',
     featured: true,
     stats: [
       { label: 'Avg Delivery Time', value: '25 mins' },
@@ -193,7 +193,7 @@ export const projectsData: Project[] = [
     tags: ['React', 'TypeScript', 'Tailwind CSS', 'E-Commerce', 'Custom Tailoring Layouts'],
     category: 'Web App',
     githubUrl: 'https://github.com',
-    liveUrl: 'https://example.com',
+    liveUrl: 'https://doosseeh-xiv.pages.dev',
     featured: true,
     stats: [
       { label: 'Client Retention', value: '94%' },
