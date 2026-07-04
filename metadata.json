@@ -1,0 +1,8 @@
+{
+  "name": "MorningStar Portfolio official ",
+  "description": "A minimalist, highly polished responsive developer portfolio with an interactive projects gallery, permanent premium dark theme, and elegant animations, styled in clean blue and indigo accents.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
