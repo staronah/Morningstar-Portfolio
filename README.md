@@ -6,7 +6,7 @@
 
 **Full-Stack Developer • Mobile Developer • UI/UX Enthusiast**
 
-🌐 **Website:** https://staronah.com
+🌐 **Website:** https://luckyonah.pages.dev/
 
 </div>
 
@@ -41,7 +41,7 @@ I'm **Lucky Onah**, also known as **Morningstar**, a developer passionate about 
 
 ## Website
 
-🌐 https://staronah.com
+🌐 https://luckyonah.pages.dev/
 
 ---
 
